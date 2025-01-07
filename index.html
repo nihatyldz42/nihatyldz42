@@ -1,1 +1,221 @@
-hello world
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NR42LABS</title>
+    <style>
+      body {
+        background: rgb(89, 28, 131);
+      }
+      .header > h2 {
+        text-align: center;
+        color: white;
+      }
+
+      .products {
+        height: 350px;
+        overflow: scroll;
+      }
+
+      .products > ul {
+        list-style: none;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .products ul > li {
+        margin: 5px;
+        padding: 5px;
+        background: #6e8cd0;
+        color: white;
+        border-radius: 6px;
+      }
+
+      .right {
+        float: right;
+      }
+
+      .redbtn {
+        background-color: red;
+        border-style: none;
+        border-radius: 3px;
+        color: white;
+      }
+
+      .greenbtn {
+        background-color: green;
+        border-style: none;
+        border-radius: 3px;
+        color: white;
+      }
+      .pay {
+        margin-top: 10px;
+      }
+
+      .baslik {
+        text-align: center;
+      }
+
+      .odeBtn {
+        width: 100%;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 5px;
+        border-style: none;
+        color: white;
+        background: rgb(106, 100, 204);
+      }
+
+      .notlar {
+        width: 98%;
+        height: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>NR42LABS Çay Evleri Hızlı Sipariş</h2>
+    </div>
+
+    <div class="products">
+      <ul>
+        <h3 class="baslik">İÇECEKLER</h3>
+        <li>
+          ÇAY
+          <div class="right">
+            <button class="redbtn" onclick="azalt(0)">-</button>
+            <b class="oge0"> 0 </b>
+            <button class="greenbtn" onclick="artir(0)">+</button>
+          </div>
+        </li>
+        <li>
+          KAHVE
+          <div class="right">
+            <button class="redbtn" onclick="azalt(1)">-</button>
+            <b class="oge1"> 0 </b>
+            <button class="greenbtn" onclick="artir(1)">+</button>
+          </div>
+        </li>
+        <li>
+          CHURCILL
+          <div class="right">
+            <button class="redbtn" onclick="azalt(2)">-</button>
+            <b class="oge2"> 0 </b>
+            <button class="greenbtn" onclick="artir(2)">+</button>
+          </div>
+        </li>
+        <li>
+          KİVİ
+          <div class="right">
+            <button class="redbtn" onclick="azalt(3)">-</button>
+            <b class="oge3"> 0 </b>
+            <button class="greenbtn" onclick="artir(3)">+</button>
+          </div>
+        </li>
+        <li>
+          ORALET
+          <div class="right">
+            <button class="redbtn" onclick="azalt(4)">-</button>
+            <b class="oge4"> 0 </b>
+            <button class="greenbtn" onclick="artir(4)">+</button>
+          </div>
+        </li>
+        <li>
+          IHLAMUR
+          <div class="right">
+            <button class="redbtn" onclick="azalt(5)">-</button>
+            <b class="oge5"> 0 </b>
+            <button class="greenbtn" onclick="artir(5)">+</button>
+          </div>
+        </li>
+        <li>
+          NANE LİMON
+          <div class="right">
+            <button class="redbtn" onclick="azalt(6)">-</button>
+            <b class="oge6"> 0 </b>
+            <button class="greenbtn" onclick="artir(6)">+</button>
+          </div>
+        </li>
+        <li>
+          NESCAFE
+          <div class="right">
+            <button class="redbtn" onclick="azalt(7)">-</button>
+            <b class="oge7"> 0 </b>
+            <button class="greenbtn" onclick="artir(7)">+</button>
+          </div>
+        </li>
+        <li>
+          SU
+          <div class="right">
+            <button class="redbtn" onclick="azalt(8)">-</button>
+            <b class="oge8"> 0 </b>
+            <button class="greenbtn" onclick="artir(8)">+</button>
+          </div>
+        </li>
+        <h3 class="baslik">YİYECEKLER</h3>
+        <li>
+          TOST
+          <div class="right">
+            <button class="redbtn" onclick="azalt(9)">-</button>
+            <b class="oge9"> 0 </b>
+            <button class="greenbtn" onclick="artir(9)">+</button>
+          </div>
+        </li>
+        <li>
+          SİMİT
+          <div class="right">
+            <button class="redbtn" onclick="azalt(10)">-</button>
+            <b class="oge10"> 0 </b>
+            <button class="greenbtn" onclick="artir(10)">+</button>
+          </div>
+        </li>
+        <li>
+          SANDVİÇ
+          <div class="right">
+            <button class="redbtn" onclick="azalt(11)">-</button>
+            <b class="oge11"> 0 </b>
+            <button class="greenbtn" onclick="artir(11)">+</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pay">
+      <textarea
+        name=""
+        id=""
+        class="notlar"
+        placeholder="Sipariş ile ilgili notlarınızı bu kısma yazabilirsiniz."
+      ></textarea>
+      <button class="odeBtn" onclick="ode()">Ödeme Yap ></button>
+    </div>
+    <div class="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      var ogeler = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+      function azalt(oge) {
+        if (ogeler[oge] == 0) return;
+        ogeler[oge]--;
+        document.querySelector(`.oge${oge}`).innerHTML = ` ${ogeler[oge]} `;
+      }
+
+      function artir(oge) {
+        if (ogeler[oge] >= 10) return;
+
+        ogeler[oge]++;
+        document.querySelector(`.oge${oge}`).innerHTML = ` ${ogeler[oge]} `;
+      }
+
+      function ode() {
+        Swal.fire({
+          title: "Hata",
+          text: "Ödeme işlemi ile ilgili bir sorun oluştu lütfen daha sonra tekrar deneyiniz.",
+          icon: "error",
+        });
+      }
+    </script>
+  </body>
+</html>
