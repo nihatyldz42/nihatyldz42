@@ -3,219 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NR42LABS</title>
-    <style>
-      body {
-        background: rgb(89, 28, 131);
-      }
-      .header > h2 {
-        text-align: center;
-        color: white;
-      }
-
-      .products {
-        height: 350px;
-        overflow: scroll;
-      }
-
-      .products > ul {
-        list-style: none;
-        background-color: #fff;
-        padding: 5px;
-        border-radius: 5px;
-      }
-      .products ul > li {
-        margin: 5px;
-        padding: 5px;
-        background: #6e8cd0;
-        color: white;
-        border-radius: 6px;
-      }
-
-      .right {
-        float: right;
-      }
-
-      .redbtn {
-        background-color: red;
-        border-style: none;
-        border-radius: 3px;
-        color: white;
-      }
-
-      .greenbtn {
-        background-color: green;
-        border-style: none;
-        border-radius: 3px;
-        color: white;
-      }
-      .pay {
-        margin-top: 10px;
-      }
-
-      .baslik {
-        text-align: center;
-      }
-
-      .odeBtn {
-        width: 100%;
-        font-weight: bold;
-        padding: 5px;
-        border-radius: 5px;
-        border-style: none;
-        color: white;
-        background: rgb(106, 100, 204);
-      }
-
-      .notlar {
-        width: 98%;
-        height: 90px;
-      }
-    </style>
+    <title>Gizlilik Politikası</title>
   </head>
   <body>
-    <div class="header">
-      <h2>NR42LABS Çay Evleri Hızlı Sipariş</h2>
-    </div>
-
-    <div class="products">
-      <ul>
-        <h3 class="baslik">İÇECEKLER</h3>
-        <li>
-          ÇAY
-          <div class="right">
-            <button class="redbtn" onclick="azalt(0)">-</button>
-            <b class="oge0"> 0 </b>
-            <button class="greenbtn" onclick="artir(0)">+</button>
-          </div>
-        </li>
-        <li>
-          KAHVE
-          <div class="right">
-            <button class="redbtn" onclick="azalt(1)">-</button>
-            <b class="oge1"> 0 </b>
-            <button class="greenbtn" onclick="artir(1)">+</button>
-          </div>
-        </li>
-        <li>
-          CHURCILL
-          <div class="right">
-            <button class="redbtn" onclick="azalt(2)">-</button>
-            <b class="oge2"> 0 </b>
-            <button class="greenbtn" onclick="artir(2)">+</button>
-          </div>
-        </li>
-        <li>
-          KİVİ
-          <div class="right">
-            <button class="redbtn" onclick="azalt(3)">-</button>
-            <b class="oge3"> 0 </b>
-            <button class="greenbtn" onclick="artir(3)">+</button>
-          </div>
-        </li>
-        <li>
-          ORALET
-          <div class="right">
-            <button class="redbtn" onclick="azalt(4)">-</button>
-            <b class="oge4"> 0 </b>
-            <button class="greenbtn" onclick="artir(4)">+</button>
-          </div>
-        </li>
-        <li>
-          IHLAMUR
-          <div class="right">
-            <button class="redbtn" onclick="azalt(5)">-</button>
-            <b class="oge5"> 0 </b>
-            <button class="greenbtn" onclick="artir(5)">+</button>
-          </div>
-        </li>
-        <li>
-          NANE LİMON
-          <div class="right">
-            <button class="redbtn" onclick="azalt(6)">-</button>
-            <b class="oge6"> 0 </b>
-            <button class="greenbtn" onclick="artir(6)">+</button>
-          </div>
-        </li>
-        <li>
-          NESCAFE
-          <div class="right">
-            <button class="redbtn" onclick="azalt(7)">-</button>
-            <b class="oge7"> 0 </b>
-            <button class="greenbtn" onclick="artir(7)">+</button>
-          </div>
-        </li>
-        <li>
-          SU
-          <div class="right">
-            <button class="redbtn" onclick="azalt(8)">-</button>
-            <b class="oge8"> 0 </b>
-            <button class="greenbtn" onclick="artir(8)">+</button>
-          </div>
-        </li>
-        <h3 class="baslik">YİYECEKLER</h3>
-        <li>
-          TOST
-          <div class="right">
-            <button class="redbtn" onclick="azalt(9)">-</button>
-            <b class="oge9"> 0 </b>
-            <button class="greenbtn" onclick="artir(9)">+</button>
-          </div>
-        </li>
-        <li>
-          SİMİT
-          <div class="right">
-            <button class="redbtn" onclick="azalt(10)">-</button>
-            <b class="oge10"> 0 </b>
-            <button class="greenbtn" onclick="artir(10)">+</button>
-          </div>
-        </li>
-        <li>
-          SANDVİÇ
-          <div class="right">
-            <button class="redbtn" onclick="azalt(11)">-</button>
-            <b class="oge11"> 0 </b>
-            <button class="greenbtn" onclick="artir(11)">+</button>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="pay">
-      <textarea
-        name=""
-        id=""
-        class="notlar"
-        placeholder="Sipariş ile ilgili notlarınızı bu kısma yazabilirsiniz."
-      ></textarea>
-      <button class="odeBtn" onclick="ode()">Ödeme Yap ></button>
-    </div>
-    <div class="footer"></div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-      var ogeler = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-      function azalt(oge) {
-        if (ogeler[oge] == 0) return;
-        ogeler[oge]--;
-        document.querySelector(`.oge${oge}`).innerHTML = ` ${ogeler[oge]} `;
-      }
-
-      function artir(oge) {
-        if (ogeler[oge] >= 10) return;
-
-        ogeler[oge]++;
-        document.querySelector(`.oge${oge}`).innerHTML = ` ${ogeler[oge]} `;
-      }
-
-      function ode() {
-        Swal.fire({
-          title: "Hata",
-          text: "Ödeme işlemi ile ilgili bir sorun oluştu lütfen daha sonra tekrar deneyiniz.",
-          icon: "error",
-        });
-      }
-    </script>
+    <h1>Gizlilik Politikası</h1>
+    <p>Son güncellenme: 25/01/2025</p>
+    <p>
+      Güvenliğiniz bizim için önemli. Bu sebeple bizimle paylaşacağınız kişisel
+      verileriz hassasiyetle korunmaktadır.
+    </p>
+    <p>
+      Biz, nr42labs, veri sorumlusu olarak, bu gizlilik ve kişisel verilerin
+      korunması politikası ile, hangi kişisel verilerinizin hangi amaçla
+      işleneceği, işlenen verilerin kimlerle ve neden paylaşılabileceği, veri
+      işleme yöntemimiz ve hukuki sebeplerimiz ile; işlenen verilerinize ilişkin
+      haklarınızın neler olduğu hususunda sizleri aydınlatmayı amaçlıyoruz.
+    </p>
+    <h2>Toplanan Kişisel Verileriniz, Toplanma Yöntemi ve Hukuki Sebebi</h2>
+    <p>
+      Kimlik, (isim, soy isim, doğum tarihi gibi) iletişim, (adres, e-posta
+      adresi, telefon, IP, konum gibi) özlük, sosyal medya, finans bilgileriniz
+      ile görsel ve işitsel kayıtlarınız tarafımızca, çerezler (cookies) vb.
+      teknolojiler vasıtasıyla, otomatik veya otomatik olmayan yöntemlerle ve
+      bazen de analitik sağlayıcılar, reklam ağları, arama bilgi sağlayıcıları,
+      teknoloji sağlayıcıları gibi üçüncü taraflardan elde edilerek,
+      kaydedilerek, depolanarak ve güncellenerek, aramızdaki hizmet ve sözleşme
+      ilişkisi çerçevesinde ve süresince, meşru menfaat işleme şartına
+      dayanılarak işlenecektir.
+    </p>
+    <h2>Kişisel Verilerinizin İşlenme Amacı</h2>
+    <p>
+      Bizimle paylaştığınız kişisel verileriniz; hizmetlerimizden
+      faydalanabilmeniz amacıyla sizlerle sözleşmeler kurabilmek, sunduğumuz
+      hizmetlerin gerekliliklerini en iyi şekilde ve aramızdaki sözleşmelere
+      uygun olarak yerine getirebilmek, bu sözleşmelerden doğan haklarınızın
+      tarafınızca kullanılmasını sağlayabilmek, ürün ve hizmetlerimizi,
+      ihtiyaçlarınız doğrultusunda geliştirebilmek ve bu gelişmelerden sizleri
+      haberdar edebilmek, ayrıca sizleri daha geniş kapsamlı hizmet
+      sağlayıcıları ile yasal çerçeveler içerisinde buluşturabilmek ve kanundan
+      doğan zorunlulukların (kişisel verilerin talep halinde adli ve idari
+      makamlarla paylaşılması) yerine getirilebilmesi amacıyla, sözleşme ve
+      hizmet süresince, amacına uygun ve ölçülü bir şekilde işlenecek ve
+      güncellenecektir.
+    </p>
+    <h2>
+      Toplanan Kişisel Verilerin Kimlere ve Hangi Amaçlarla Aktarılabileceği
+    </h2>
+    <p>
+      Bizimle paylaştığınız kişisel verileriniz; faaliyetlerimizi yürütmek üzere
+      hizmet aldığımız ve/veya verdiğimiz, sözleşmesel ilişki içerisinde
+      bulunduğumuz, iş birliği yaptığımız, yurt içi ve yurt dışındaki 3.
+      şahıslar ile kurum ve kuruluşlara ve talep halinde adli ve idari
+      makamlara, gerekli teknik ve idari önlemler alınması koşulu ile
+      aktarılabilecektir.
+    </p>
+    <h2>Kişisel Verileri İşlenen Kişi Olarak Haklarınız</h2>
+    <p>
+      KVKK madde 11 uyarınca herkes, veri sorumlusuna başvurarak aşağıdaki
+      haklarını kullanabilir:
+    </p>
+    <ol type="a">
+      <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
+      <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,</li>
+      <li>
+        Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp
+        kullanılmadığını öğrenme,
+      </li>
+      <li>
+        Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü
+        kişileri bilme,
+      </li>
+      <li>
+        Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların
+        düzeltilmesini isteme,
+      </li>
+      <li>Kişisel verilerin silinmesini veya yok edilmesini isteme,</li>
+      <li>
+        (e) ve (f) bentleri uyarınca yapılan işlemlerin, kişisel verilerin
+        aktarıldığı üçüncü kişilere bildirilmesini isteme,
+      </li>
+      <li>
+        İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz
+        edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına
+        itiraz etme,
+      </li>
+      <li>
+        Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara
+        uğraması hâlinde zararın giderilmesini talep etme, haklarına sahiptir.
+      </li>
+    </ol>
+    <p>
+      Yukarıda sayılan haklarınızı kullanmak üzere contact@nr42labs.com
+      üzerinden bizimle iletişime geçebilirsiniz.
+    </p>
+    <h2>İletişim</h2>
+    <p>
+      Sizlere talepleriniz doğrultusunda hizmet sunabilmek amacıyla, sadece
+      gerekli olan kişisel verilerinizin, işbu gizlilik ve kişisel verilerin
+      işlenmesi politikası uyarınca işlenmesini, kabul edip etmemek hususunda
+      tamamen özgürsünüz. Uygulamayı kullanmaya devam ettiğiniz takdirde, kabul
+      etmiş olduğunuz tarafımızca varsayılacaktır. Şayet kabul etmiyorsanız,
+      lütfen uygulamayı tüm cihazlarınızdan kaldırınız. Ayrıntılı bilgi için
+      bizimle contact@nr42labs.com e-mail adresi üzerinden iletişime geçmekten
+      lütfen çekinmeyiniz.
+    </p>
   </body>
 </html>
